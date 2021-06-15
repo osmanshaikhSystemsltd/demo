@@ -1,0 +1,115 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: bot
+  examples: |
+    - are you a bot?
+    - are you real?
+    - are you human?
+    - who are you?
+- intent: question_related_HR
+  examples: |
+    - I have a question related to HR policies​
+    - a question related to HR policies
+    - I have a question related to HR policies
+- intent: main_menu
+  examples: |
+    - Back to Main Menu​
+    - Take back to main Menu
+    - Back to Main Menu
+- intent: leaves_faq1
+  examples: |
+    - Leaves Faq1
+    - What is in Leave Faqs 1
+- intent: leaves_faq2
+  examples: |
+    - Leaves Faq2
+    - Tell me about Leaves FAQs 2
+- intent: leaves_policy
+  examples: |
+    - Leaves Policy​
+    - I want to know about Leaves Policy
+    - Tell me about Leaves Policy
+- intent: allowance_policy
+  examples: |
+    - Allowance Policy​
+    - I want to know about Allowance Policy
+    - Tell me about Allowance Policy
+    - Allowance Policy​​
+- intent: allowance_faq_1
+  examples: |
+    - allowance Faq1
+    - What is in allowance Faqs 1
+- intent: allowance_faq_2
+  examples: |
+    - allowance Faq2
+    - allowance 2 faqs are?
+    - tell me allowance 2 faq
+    - Tell me about allowance Faqs 2
+    - Allowance Faq2
+- intent: hbl_charge_sheet
+  examples: |
+    - HBL Charge Sheet DOC QA
+    - Show me HBL Charge Sheet DOC QA options
+    - I want to know about HBL Charge Sheet DOC QA
+- intent: contact_us_information
+  examples: |
+    - Contact Information
+    - I want to know Contact Information
+- intent: contact_number
+  examples: |
+    - Contact Number
+    - What is the contact number?
+- intent: premise_address
+  examples: |
+    - Head Office Address
+    - What is the head office address?
+- intent: out_of_scope
+  examples: |
+    - What is Revalidation Commission
+    - What is HBL CarLoan?
+    - What Local Foreign Funds Transfers (LFFT)
+    - How Registration of Import Contract
+    - What is Handling of Duty Draw Back Claims
+    - How does Processing of Documents work
+    - Tell me about Amendment Advising
+    - Question about Transfer of LC to New Beneficiary
+- intent: make_request
+  examples: |
+    - I want to make a request.​
+    - I need to make a request
+    - I have to make request.
+- intent: tax_cert_request
+  examples: |
+    - Tax Certificate Request
+    - I have to make a tax certificate request
+    - process my tax certificate request
+- intent: income_tax_cert_option_selected
+  examples: |
+    - Income Tax Certificate
+    - I need to retreive income tax certificate
+    - i want income tax certificate
+    - i need income tax certificate
+- intent: employee_id
+  examples: |
+    - 22024
+    - 42345
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - later

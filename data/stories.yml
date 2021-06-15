@@ -1,0 +1,72 @@
+version: "2.0"
+
+stories:
+  
+- story: main_menu
+  steps:
+  - intent: main_menu
+  - action: utter_start_chat
+  
+- story: basic path
+  steps:
+  - intent: greet
+  - action: utter_start_chat
+  - intent: question_related_HR
+  - action: utter_hr_questions
+  
+- story: leave policy path
+  steps:
+  - intent: leaves_policy
+  - action: utter_leaves_policy_options
+  - intent: leaves_faq1
+  - action: utter_leaves_faq1
+  - action: utter_start_chat
+  - intent: leaves_faq2
+  - action: utter_leaves_faq2
+  - action: utter_start_chat
+  
+- story: allowance policy path
+  steps:
+  - intent: allowance_policy
+  - action: utter_allowance_policy_options
+  - intent: allowance_faq_1
+  - action: utter_allowance_faq_1
+  - action: utter_start_chat
+  - intent: allowance_faq_2
+  - action: utter_allowance_faq_2
+  - action: utter_start_chat
+
+- story: hbl charge sheet
+  steps:
+  - intent: hbl_charge_sheet
+  - action: utter_hbl_charges
+  - intent: out_of_scope
+  - action: action_fallback
+
+- story: contact_information
+  steps:
+  - intent: contact_us_information
+  - action: utter_contact_us_options
+  - intent: contact_number
+  - action: utter_contact_number
+  - action: utter_main_or_bye
+  - intent: premise_address
+  - action: utter_premise_address
+  - action: utter_main_or_bye
+
+- story: request_api
+  steps:
+  - intent: make_request
+  - action: utter_request_options
+  - intent: tax_cert_request
+  - action: utter_tax_cert_options
+  - intent: income_tax_cert_option_selected
+  - action: utter_ask_emp_id
+  - intent: employee_id
+  - action: action_localapi
+  - action: utter_main_or_bye
+  
+- story: goodbye
+  steps: 
+  - intent: goodbye
+  - action: utter_goodbye

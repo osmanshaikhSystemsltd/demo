@@ -1,0 +1,185 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- question_related_HR:
+    use_entities: true
+- main_menu:
+    use_entities: true
+- leaves_faq1:
+    use_entities: true
+- leaves_faq2:
+    use_entities: true
+- leave_policy:
+    use_entities: true
+- bot:
+    use_entities: true
+- allowance_policy:
+    use_entities: true
+- leaves_policy:
+    use_entities: true
+- allowance_faq_1:
+    use_entities: true
+- allowance_faq_2:
+    use_entities: true
+- contact_us_information:
+    use_entities: true
+- contact_number:
+    use_entities: true
+- premise_address:
+    use_entities: true
+- hbl_charge_sheet:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- custom_action:
+    use_entities: true
+- make_request:
+    use_entities: true
+- tax_cert_request:
+    use_entities: true
+- income_tax_cert_option_selected:
+    use_entities: true
+- employee_id:
+    use_entities: true
+    
+entities:
+- fallback
+slots:
+  fallback:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_ask_emp_id:
+  - text: Please enter your employee ID
+  utter_greet:
+  - text: Hey! How are you?
+  utter_iamabot:
+  - text: I am Rummi A Bot
+  utter_start_chat:
+  - buttons:
+    - payload: I have a question related to HR policies
+      title: I have a question related to HR policies
+    - payload: I want to make a request.​
+      title: I want to make a request.​
+    - payload: Contact Information
+      title: Contact Information
+    text: |-
+      Hello! I am Rumi your Virtual Assistant. ​
+      Please select an option below so I can assist you today.
+  utter_hr_questions:
+  - buttons:
+    - payload: Leaves Policy​
+      title: Leaves Policy​
+    - payload: Allowance Policy​​
+      title: Allowance Policy​​
+    - payload: Staff Benefits​​​
+      title: Staff Benefits​
+    - payload: HBL Charge Sheet DOC QA
+      title: HBL Charge Sheet DOC QA
+    - payload: Back to Main Menu​​​
+      title: Back to Main Menu​
+    text: Please select one of the following available options. Or type in ‘menu’ to go back to the main menu.
+  utter_leaves_policy_options:
+  - buttons:
+    - payload: Leaves Faq1
+      title: Leaves Faq1
+    - payload: Leaves Faq2
+      title: Leaves Faq2​
+    - payload: Back to Main Menu
+      title: Back to Main Menu
+    text: Please Select one of the questions from the list below or alternatively  you can type in your question.​
+  utter_allowance_policy_options:
+  - buttons:
+    - payload: allowance Faq1
+      title: Allowance Faq 1
+    - payload: allowance Faq2
+      title: Allowance Faq 2​
+    - payload: Back to Main Menu
+      title: Back to Main Menu
+    text: Please Select one of the questions from the list below or alternatively  you can type in your question.​
+  utter_leaves_faq1:
+  - text: Leaves FAQ1 Information
+  utter_leaves_faq2:
+  - text: Leaves FAQ2 Information
+  utter_allowance_faq_1:
+  - text: This is allowance FAQ1 information
+  utter_allowance_faq_2:
+  - text: This is allowance FAQ2 information
+  utter_hbl_charges:
+  - text: |
+      As I am still learning I can currently only assist you with your queries related to leaves, payroll, allowances and staff finance. ​You can ask me questions, such as:​ 
+      What is Revalidation Commission
+      What is HBL CarLoan?
+      What Local Foreign Funds Transfers (LFFT)
+      How does Processing of Documents work
+  utter_goodbye:
+  - text: Goodbye! You can contact us 24/7
+  utter_contact_us_options:
+  - buttons:
+    - payload: Contact Number
+      title: Contact Number
+    - payload: Head Office Address
+      title: Head Office Address
+    text: Please select one of the options.
+  utter_contact_number:
+  - text: You can contact us at 111 111 425
+  utter_premise_address:
+  - text: Clifton road, Teen Talwar, Zone A Block 7 Clifton, Karachi, Karachi City, Sindh 75500
+  utter_wait:
+  - text: Kindly wait, while I skim for the answer in the documents!
+  utter_request_options:
+  - buttons:
+    - payload: Link Salary Account
+      title: Link Salary Account
+    - payload: Bank Statement Request
+      title: Bank Statement Request
+    - payload: Tax Certificate Request
+      title: Tax Certificate Request
+    - payload: Back to Main Menu
+      title: Back to Main Menu
+    text: Please select from the following
+  utter_tax_cert_options:
+  - buttons:
+    - payload: Income Tax Worksheet
+      title: Income Tax Worksheet
+    - payload: Income Tax Certificate
+      title: Income Tax Certificate
+    - payload: Withholding Tax Certificate
+      title: 30th June Balance Certificate
+    - payload: 30th June Balance Certificate
+      title: Withholding Tax Certificate
+    - payload: Back to Main Menu
+      title: Back to Main Menu
+    text: Please select from the following
+  utter_main_or_bye:
+  - buttons:
+    - payload: Back to Main Menu
+      title: Main Menu
+    - payload: GoodBye
+      title: GoodBye
+    text: Please select from the following
+actions:
+- action_fallback
+- action_localapi
+forms: {}
+e2e_actions: []
